@@ -1,0 +1,32 @@
+<div class = "container">
+  <h2>Update Employee</h2>
+    <form  class="was-validated" #addEmployeeform = "ngForm" (ngSubmit)="updateEmployee()">
+      <div class="form-group">
+        <label for="uname">ID:</label>
+        <input type="text" class="form-control" placeholder="ID" name="ID" required [(ngModel)]=employee.id disabled> 
+
+      </div>
+        <div class="form-group">
+          <label for="uname">First Name:</label>
+          <input type="text" class="form-control" placeholder="Enter first Name" name="firstName" required [(ngModel)]=employee.firstName>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <div class="form-group">
+          <label for="pwd">Last Name:</label>
+          <input type="text" class="form-control"  placeholder="Enter Last Name" name="lastName" required [(ngModel)]=employee.lastName>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+    
+        <div class="form-group">
+            <label for="pwd">Salary:</label>
+            <input type="number" class="form-control"  placeholder="Enter Salary" name="salary" required [(ngModel)]=employee.salary>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+
+        <button type="submit" class="btn btn-success">Update</button>&nbsp;
+        <button type="button" class="btn btn-primary" (click)=gotoList()>Back</button>
+      </form>
+      </div>

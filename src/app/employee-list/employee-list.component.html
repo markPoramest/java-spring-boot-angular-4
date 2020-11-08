@@ -1,0 +1,30 @@
+<div class="container">
+  <h2 class = "page-header">List of Employee</h2>
+  <p>Employee in Thailand is the land of compromise company</p>            
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Employee ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Salary</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let em of employee">
+        <td>{{em.id}}</td>
+        <td>{{em.firstName}}</td>
+        <td>{{em.lastName}}</td>
+        <td>{{em.salary}}</td>
+        <td>
+            <button type="button" class="btn btn-primary" (click)="editEmployee(em.id)">Edit</button>&nbsp;
+            <button type="button" class="btn btn-info" (click)="viewEmployee(em.id)">View</button>&nbsp;
+            <button type="button" class="btn btn-danger" (click)="deleteEmployee(em.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button type="button" class="btn btn-success" (click)="gotoAddEmployee()">Add new Employee</button>
+</div>
+

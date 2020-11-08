@@ -1,0 +1,25 @@
+<div class="container">
+    <h2 class = "page-header">List of Employee</h2>
+    <p>Employee in Thailand is the land of compromise company</p>            
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Employee ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{_employee.id}}</td>
+          <td>{{_employee.firstName}}</td>
+          <td>{{_employee.lastName}}</td>
+          <td>{{_employee.salary}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="button" class="btn btn-primary" (click)="listEmployee()">Back</button>
+  </div>
+  
+  
